@@ -28,7 +28,9 @@ config.keys = {
     { key = 'L',          mods = 'LEADER',         action = act.AdjustPaneSize { 'Right', 5 }, },
     { key = 't',          mods = 'LEADER',         action = act.SpawnTab "CurrentPaneDomain" },
     -- Toggle full screen
-    { key = 'UpArrow',    mods = 'CTRL|ALT|SUPER', action = act.ToggleFullScreen }
+    { key = 'UpArrow',    mods = 'CTRL|ALT|SUPER', action = act.ToggleFullScreen },
+    -- Copy mode
+    { key = 'x',          mods = 'LEADER',         action = act.ActivateCopyMode },
 }
 
 for i = 1, 8 do
