@@ -1,8 +1,8 @@
-local wezterm = require 'wezterm'
+local wezterm = require "wezterm"
 local act = wezterm.action
 local config = {}
 
-config.leader = { key = ';', mods = 'CTRL' }
+config.leader = { key = ";", mods = "CTRL" }
 config.keys = {
     -- This will create a new split and run your default program inside it
     { key = "v",          mods = "LEADER",         action = act.SplitHorizontal { domain = "CurrentPaneDomain" } },
@@ -22,21 +22,21 @@ config.keys = {
     { key = "LeftArrow",  mods = "OPT",            action = act.SendKey { key = "b", mods = "ALT" } },
     { key = "RightArrow", mods = "OPT",            action = act.SendKey { key = "f", mods = "ALT" } },
     -- Adjust pane size
-    { key = 'J',          mods = 'LEADER',         action = act.AdjustPaneSize { 'Down', 5 }, },
-    { key = 'H',          mods = 'LEADER',         action = act.AdjustPaneSize { 'Left', 5 } },
-    { key = 'K',          mods = 'LEADER',         action = act.AdjustPaneSize { 'Up', 5 } },
-    { key = 'L',          mods = 'LEADER',         action = act.AdjustPaneSize { 'Right', 5 }, },
-    { key = 't',          mods = 'LEADER',         action = act.SpawnTab "CurrentPaneDomain" },
+    { key = "J",          mods = "LEADER",         action = act.AdjustPaneSize { "Down", 5 }, },
+    { key = "H",          mods = "LEADER",         action = act.AdjustPaneSize { "Left", 5 } },
+    { key = "K",          mods = "LEADER",         action = act.AdjustPaneSize { "Up", 5 } },
+    { key = "L",          mods = "LEADER",         action = act.AdjustPaneSize { "Right", 5 }, },
+    { key = "t",          mods = "LEADER",         action = act.SpawnTab "CurrentPaneDomain" },
     -- Toggle full screen
-    { key = 'UpArrow',    mods = 'CTRL|ALT|SUPER', action = act.ToggleFullScreen },
+    { key = "UpArrow",    mods = "CTRL|ALT|SUPER", action = act.ToggleFullScreen },
     -- Copy mode
-    { key = 'x',          mods = 'LEADER',         action = act.ActivateCopyMode },
+    { key = "x",          mods = "LEADER",         action = act.ActivateCopyMode },
 }
 
 for i = 1, 8 do
     table.insert(config.keys, {
         key = tostring(i),
-        mods = 'LEADER',
+        mods = "LEADER",
         action = act.ActivateTab(i - 1),
     })
 end
