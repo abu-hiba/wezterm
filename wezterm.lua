@@ -44,6 +44,7 @@ end
 config.initial_cols = 254
 config.initial_rows = 70
 config.hide_tab_bar_if_only_one_tab = true
+config.use_fancy_tab_bar = false
 
 config.color_scheme = "Tokyo Night"
 
